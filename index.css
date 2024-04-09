@@ -1,0 +1,16 @@
+@font-face {
+    font-family: press_Start_2P;
+    src: url(./Press_Start_2P/PressStart2P-Regular.ttf);
+}
+#h1{
+text-align: center;
+font-family: "press_Start_2P" , sans-serif ;   
+}
+#image{
+ width:600px ;  
+ height: 450px;
+}
+.button{
+display: flex;
+flex-direction: column;    
+}
