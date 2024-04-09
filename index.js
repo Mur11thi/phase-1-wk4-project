@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded",()=>{
 const likeButton = document.getElementById("likebutton")
 const themeChanger = document.getElementById("themechanger")
-const  newQuote = document.getElementById("new quote")
+const  newQuote = document.getElementById("newquote")
 const body = document.querySelector("body") 
   
 newQuote.addEventListener("click",()=>{
@@ -18,10 +18,4 @@ const authorText = quoteData[0].author
     console.log ( `Error fetching quote , ${error}`)
 })    
 })
-themeChanger.addEventListener ("click",switchTheme)
-
-function switchTheme(){
-    
-}
-
 })
