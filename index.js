@@ -13,6 +13,9 @@ const authorText = quoteData[0].author
  const quotes = document.createElement("p")
   body.appendChild(quotes)
   quotes.textContent = `${quoteText} - ${authorText} ` 
+//   forEach(quoteData{
+    
+//   })
 } )
 .catch( error => {
     console.log ( `Error fetching quote , ${error}`)
