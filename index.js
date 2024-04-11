@@ -1,11 +1,12 @@
+//
 document.addEventListener("DOMContentLoaded",()=>{
-
+//
 const themeChanger = document.getElementById("themechanger")
 const  newQuote = document.getElementById("newquote")
 const body = document.querySelector("body") 
 
   
-newQuote.addEventListener("click",()=>{
+newQuote.addEventListener("click",()=>{ //
 fetch("https://api.breakingbadquotes.xyz/v1/quotes")
 .then(res=>res.json())
 .then(quoteData =>{
@@ -30,7 +31,18 @@ const authorText = quoteData[0].author
   secondInput.type ="submit" 
     form.append(firstInput)
     form.append(secondInput)
-    body.insertBefore(form,likeButton.nextSibling)  
+    body.insertBefore(form,likeButton.nextSibling) 
+    
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault()
+        const commentMessage = firstInput.value
+      const commentDisplay =document.createElement("p")
+      commentDisplay.textContent = commentMessages
+      body.append(commentMessage)
+      
+
+    }) 
+     
   likeButton.addEventListener("click",()=>{
   likeButton.textContent = "Liked!" 
   likeButton.style.color = "red" 

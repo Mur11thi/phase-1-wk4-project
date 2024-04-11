@@ -10,7 +10,7 @@ font-family: "press_Start_2P" , sans-serif ;
 .button{
 display: flex;
 flex-direction: row;
-justify-content:center;
+align-items: center;
 width : 60px
 }
 body{
