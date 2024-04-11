@@ -1,16 +1,18 @@
-//
+//Allows the comment to load fully.
 document.addEventListener("DOMContentLoaded",()=>{
-//
+//Variables that select the various elements 
 const themeChanger = document.getElementById("themechanger")
 const  newQuote = document.getElementById("newquote")
 const body = document.querySelector("body") 
 
   
-newQuote.addEventListener("click",()=>{ //
-fetch("https://api.breakingbadquotes.xyz/v1/quotes")
-.then(res=>res.json())
-.then(quoteData =>{
- quoteData.forEach(quote=>{   
+newQuote.addEventListener("click",()=>{ //Event listener that listens for a click and then does a fetch request.
+fetch("https://api.breakingbadquotes.xyz/v1/quotes") // fetches Data from the API
+.then(res=>res.json()) // checks for the first promise from the fetch request after converting fom json.
+.then(quoteData =>{ // checks for the json promise 
+ quoteData.forEach(quote=>{    //foreach iterates the data from the API and tells it to create a new variable for 
+                               // the datas text and quotes and for each one of them it generates a like button 
+                               // a comment bar and a send button.
 const quoteText = quoteData[0].quote
 const authorText = quoteData[0].author
  const quotes = document.createElement("p")
