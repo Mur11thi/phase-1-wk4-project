@@ -6,23 +6,29 @@ const  newQuote = document.getElementById("newquote")
 const body = document.querySelector("body") 
 
   
-newQuote.addEventListener("click",()=>{ //Event listener that listens for a click and then does a fetch request.
-fetch("https://api.breakingbadquotes.xyz/v1/quotes") // fetches Data from the API
-.then(res=>res.json()) // checks for the first promise from the fetch request after converting fom json.
-.then(quoteData =>{ // checks for the json promise 
- quoteData.forEach(quote=>{    //foreach iterates the data from the API and tells it to create a new variable for 
-                               // the datas text and quotes and for each one of them it generates a like button 
-                               // a comment bar and a send button.
-const quoteText = quoteData[0].quote
-const authorText = quoteData[0].author
- const quotes = document.createElement("p")
-  body.appendChild(quotes)
-  quotes.textContent = `${quoteText} - ${authorText} `
- const  likeButton = document.createElement("button")
- likeButton.textContent = "Like"
- likeButton.id = "likebutton"
- likeButton.classList.add("likebutton")
- body.appendChild(likeButton)
+newQuote.addEventListener("click",()=>{ //=>Event listener that listens for a click and then does a fetch request.
+fetch("https://api.breakingbadquotes.xyz/v1/quotes") //=>fetches Data from the API
+.then(res=>res.json()) //=>Checks for the first promise from the fetch request after converting fom json.
+.then(quoteData =>{ //=>Checks for the json promise 
+ quoteData.forEach(quote=>{  //=>forEach iterates the data from the API and tells it to create a new variable for 
+                            // the datas text and quotes and for each one of them it generates a like button 
+                            // a comment bar and a send button.
+
+const quoteText = quoteData[0].quote //=>Assigns the quotes specifically to the quoteText variable
+const authorText = quoteData[0].author //=>Assigns the actual author specifically to the authorText variable. 
+ const quotes = document.createElement("p") //=>A variable that creates  element p
+  body.appendChild(quotes)                //=>Appends the p element in the body where the quotes and their author are
+                                         // appended as well
+  quotes.textContent = `${quoteText} - ${authorText} ` //=>Sets the text content of the newly appended element
+                                                      // to the quote and their respective authors.            
+ const  likeButton = document.createElement("button") //=>Variable that creates the button element for each quote
+                                                     // that is created.
+ likeButton.textContent = "Like" //=>Sets the likeButton's textcontent to "Like" 
+ likeButton.id = "likebutton"    //=>Sets the likeButton'S id to "likebutton" 
+ likeButton.classList.add("likebutton")//=>Adds the likeButton to the classList of "likeButton" where it can 
+                                       //receive styling from the external css file.  
+ body.appendChild(likeButton)          //=>Appends the likeButton to the body just below the quotes generated. 
+
  const form = document.createElement("form")
  const firstInput =document.createElement("input")
   firstInput.id = "comments"
