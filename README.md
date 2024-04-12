@@ -5,18 +5,19 @@
 #### By *Stephen Muriithi*
 
 ## Description
-It's a webpage that shows different types of triangles and what they look like.
+It is a project that is a website based on the award winning series *"Breaking Bad"* . The website fetches Data from the Breaking Bad's public API when the user clicks on the *"GET QUOTE"* button.For every individual quote that is generated  a like button and a comment section is generated as well;which helps the user to like the post and leave a remark about the quote if they would wish to.It is important to note that each time the *"GET QUOTE"* button
+is clicked, a new quote is generated below the preceding one and that means if the user has clicked on the button repetitively,multiple quotes will appear;to reset and have no quotes, the user can just refresh the webpage by clicking on the *refresh* icon or by pressing key combination of *ctrl + r* on windows and *command + r* on macbook.
 
 ## Installation
-You use git clone to be able to download the documents in the GitHub
+You use git clone to be able to download the documents in the GitHub.Navigate into the directory you just cloned and still while on the terminal type `code .` to open that directory in Visual Studio.Once in visual studio , go to  `index.html` and right click and select on open preview to be able to load the website.OR you can copy this link  [Breaking Bad](http://localhost:5500/?) and paste in your browser to load the website.
 
 ## Installation Requirements
 Git
 
 ### Installation instruction
 
-``` 
-Git clone git@github.com:Mur11thi/phase-1-wk4-project.git
+``` bash
+git clone git@github.com:Mur11thi/phase-1-wk4-project.git
 
 ```
 
